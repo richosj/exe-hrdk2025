@@ -1,4 +1,61 @@
 :root {
+  // 색상
   --primary-color: #3498db;
   --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
+  --text-color: #333;
+  --bg-color: #fff;
+
+  // 폰트
+  --font-family: 'Pretendard', sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+
+  // 여백
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  // 그리드
+  --container-width: 1200px;
+
+  // 그림자
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+  // 라운드
+  --border-radius: 4px;
+
+  // 트랜지션
+  --transition-speed: 0.3s;
+  --transition-ease: ease-in-out;
+
+  // 최대 너비
+  --max-width-xs: 480px;
+  --max-width-sm: 768px;
+  --max-width-md: 1024px;
+  --max-width-lg: 1200px;
+  --max-width-xl: 1440px;
+
+  // 폼 요소 (input, button)
+  --input-height: 40px;
+  --input-padding: 0 12px;
+  --input-border: 1px solid #ccc;
+  --input-border-radius: 4px;
+  --input-font-family: var(--font-family);
+  --input-font-size: var(--font-size-base);
+  --input-bg-color: #fff;
+  --input-text-color: #333;
+  --input-placeholder-color: #999;
+
+  --button-height: 40px;
+  --button-padding: 0 16px;
+  --button-border-radius: 4px;
+  --button-font-family: var(--font-family);
+  --button-font-size: var(--font-size-base);
+  --button-bg-color: var(--primary-color);
+  --button-text-color: #fff;
+  --button-hover-bg-color: darken(var(--primary-color), 10%);
 }

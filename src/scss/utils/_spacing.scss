@@ -1,0 +1,18 @@
+$spacers: (0, 4px, 8px, 12px, 16px, 24px, 32px, 40px);
+
+@each $space in $spacers {
+  $i: index($spacers, $space) - 1;
+
+  .m-#{$i} { margin: $space !important; }
+  .p-#{$i} { padding: $space !important; }
+
+  .mt-#{$i} { margin-top: $space !important; }
+  .mb-#{$i} { margin-bottom: $space !important; }
+  .ml-#{$i} { margin-left: $space !important; }
+  .mr-#{$i} { margin-right: $space !important; }
+
+  .pt-#{$i} { padding-top: $space !important; }
+  .pb-#{$i} { padding-bottom: $space !important; }
+  .pl-#{$i} { padding-left: $space !important; }
+  .pr-#{$i} { padding-right: $space !important; }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>공정채용 기업교육</title>
+  {{> meta}}
+  <script type="module" src="/js/page/index.js"></script>
+</head>
+<body>
+  {{> header}}
+  <main>
+    <nav class="tab-menu">
+      <button class="tab-btn active" data-target="#section1">인사(기초)</button>
+      <button class="tab-btn" data-target="#section2">인사(심화)</button>
+      <button class="tab-btn" data-target="#section3">평가(일반)</button>
+      <button class="tab-btn" data-target="#section4">평가(보수)</button>
+    </nav>
+    <section id="section1" class="tab-section" style="height: 500px;"></section>
+    <section id="section2" class="tab-section" style="height: 500px;"></section>
+    <section id="section3" class="tab-section" style="height: 500px;"></section>
+    <section id="section4" class="tab-section" style="height: 500px;"></section>
+  </main>
+  {{> footer}}
+</body>
+</html>

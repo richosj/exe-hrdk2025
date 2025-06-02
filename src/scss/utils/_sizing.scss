@@ -1,0 +1,8 @@
+$widths: (0, 25%, 50%, 75%, 100%);
+
+@each $width in $widths {
+  $i: index($widths, $width) - 1;
+
+  .w-#{$i} { width: $width !important; }
+  .h-#{$i} { height: $width !important; }
+}

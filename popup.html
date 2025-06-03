@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>공정채용 기업교육</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <script type="module" src="./assets/js/main2.js"></script>
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+    <header id="header" class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="/"><img src="./assets/images/logos.png" alt="logo"></a>
+            </div>
+            <div class="header__login">
+                <a href="#" class="popup-open" data-target="loginPopup"><i class="material-symbols-outlined">login</i>로그인</a>
+                <a href="#"><i class="material-symbols-outlined">logout</i>로그아웃</a>
+                <a href="#"><i class="material-symbols-outlined">menu_book</i>나의 학습실</a>
+    
+            </div>
+        </div>
+    </header>
+    
+    <article class="all-banner">
+        <img src="./assets/images/back.png" alt="banner">
+    </article>
+    <button class="popup-open" data-target="loginPopup">로그인 팝업 열기</button>
+    <button class="popup-open" data-target="findIdPopup">아이디 찾기 팝업 열기</button>
+    <button class="popup-open" data-target="resetPwPopup">비밀번호 재설정 팝업 열기</button>
+    <button class="popup-open" data-target="findIdCompletePopup">아이디 찾기 완료 팝업 열기</button>
+    <button class="popup-open" data-target="resetPwCompletePopup">비밀번호 재설정 완료 팝업 열기</button>
+
+    <button class="popup-open" data-target="cancelPopup">수강취소 팝업 열기</button>
+    <button class="popup-open" data-target="confirmPopup">수강신청 확인 팝업 열기</button>
+
+
+    <!-- 수강신청 확인 팝업 -->
+    <div class="popup-wrap" id="confirmPopup">
+        <div class="popup-wrap__content">
+            <div class="popup-wrap__content__close">
+                <i class="material-symbols-outlined">close</i>
+            </div>
+            <div class="popup-wrap__content__title">
+                <h3>과정 수료조건을 확인하셨나요?</h3>
+            </div>
+            <div class="popup-wrap__content__form">
+                <div class="popup-wrap__content__form__message">
+                    <p>1. 오프라인 교육 전 <b class="text-red">이러닝 선행 수강</b></p>
+                    <p>2. 전체 교육 <b class="text-red">수료율 80% 이상</b></p>
+                    <p>3. 오프라인 교육 <b class="text-red">종료 후 만족도 조사</b></p>
+                </div>
+                <div class="popup-wrap__content__form__button">
+                    <button type="button" class="btn-primary">
+                        <i class="material-symbols-outlined">check</i>
+                        확인
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 수강취소 팝업 -->
+    <div class="popup-wrap" id="cancelPopup">
+        <div class="popup-wrap__content">
+            <div class="popup-wrap__content__close">
+                <i class="material-symbols-outlined">close</i>
+            </div>
+            <div class="popup-wrap__content__title">
+                <h3> 해당 신청내역을 취소하시겠습니까?<br>기존 학습 진도율은 삭제됩니다.</h3>
+            </div>
+            <div class="popup-wrap__content__form">
+
+                <div class="popup-wrap__content__form__item">
+                    <label for="reason">취소 사유</label>
+                    <select id="reason" class="form-input">
+                        <option value="">사유를 선택하세요</option>
+                        <option value="1">일정 변경</option>
+                        <option value="2">개인 사정</option>
+                        <option value="3">기타</option>
+                    </select>
+                </div>
+                <div class="popup-wrap__content__form__item">
+                    <label for="otherReason">기타 사유</label>
+                    <textarea id="otherReason" class="form-input" placeholder="기타 사유를 입력하세요"></textarea>
+                </div>
+                <div class="popup-wrap__content__form__button">
+                    <button type="button" class="btn-primary">
+                        <i class="material-symbols-outlined">check</i>
+                        확인
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 로그인 팝업 -->
+    <div class="popup-wrap" id="loginPopup">
+        <div class="popup-wrap__content">
+            <div class="popup-wrap__content__close">
+                <i class="material-symbols-outlined">close</i>
+            </div>
+            <div class="popup-wrap__content__title">
+                <h3>로그인</h3>
+            </div>
+            <div class="popup-wrap__content__form">
+                <form action="">
+                    <div class="popup-wrap__content__form__item">
+                        <label for="id">아이디</label>
+                        <input type="text" id="id" name="id" placeholder="아이디를 입력해주세요." class="form-input">
+                    </div>
+                    <div class="popup-wrap__content__form__item">
+                        <label for="pw">비밀번호</label>
+                        <input type="password" id="pw" name="pw" placeholder="비밀번호를 입력해주세요." class="form-input">
+                    </div>
+                </form>
+                <div class="popup-wrap__content__form__button">
+                    <button type="submit">로그인</button>
+                    <a href="#">회원가입</a>
+                </div>
+                <div class="popup-wrap__content__form__link">
+                    <a href="#">아이디 찾기</a>
+                    <a href="#">비밀번호 찾기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 아이디 찾기 팝업 -->
+    <div class="popup-wrap " id="findIdPopup">
+        <div class="popup-wrap__content">
+            <div class="popup-wrap__content__close">
+                <i class="material-symbols-outlined">close</i>
+            </div>
+            <div class="popup-wrap__content__title">
+                <h3>아이디 찾기</h3>
+            </div>
+            <div class="popup-wrap__content__form">
+                <form action="">
+                    <div class="popup-wrap__content__form__item">
+                        <label for="name">성함</label>
+                        <input type="text" id="name" name="name" placeholder="성함을 입력해주세요." class="form-input">
+                    </div>
+                    <div class="popup-wrap__content__form__item">
+                        <label for="email">가입시 이메일 주소</label>
+                        <input type="email" id="email" name="email" placeholder="이메일 주소를 입력해주세요." class="form-input">
+                    </div>
+                </form>
+                <div class="popup-wrap__content__form__button">
+                    <button type="submit">
+                        <i class="material-symbols-outlined">search</i>
+                        아이디 찾기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 비밀번호 재설정 팝업 -->
+    <div class="popup-wrap" id="resetPwPopup">
+        <div class="popup-wrap__content">
+            <div class="popup-wrap__content__close">
+                <i class="material-symbols-outlined">close</i>
+            </div>
+            <div class="popup-wrap__content__title">
+                <h3>비밀번호 재설정</h3>
+            </div>
+            <div class="popup-wrap__content__form">
+                <form action="">
+                    <div class="popup-wrap__content__form__item">
+                        <label for="findId">아이디</label>
+                        <input type="text" id="findId" name="findId" placeholder="아이디를 입력해주세요." class="form-input">
+                    </div>
+                    <div class="popup-wrap__content__form__item">
+                        <label for="findName">성함</label>
+                        <input type="text" id="findName" name="findName" placeholder="성함을 입력해주세요." class="form-input">
+                    </div>
+                    <div class="popup-wrap__content__form__item">
+                        <label for="phone">가입시 핸드폰번호</label>
+                        <input type="tel" id="phone" name="phone" placeholder="핸드폰번호를 입력해주세요." class="form-input">
+                    </div>
+                </form>
+                <div class="popup-wrap__content__form__button">
+                    <button type="submit">
+                        <i class="material-symbols-outlined">sms</i>
+                        비밀번호 문자전송
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 아이디 찾기 완료 팝업 -->
+    <div class="popup-wrap " id="findIdCompletePopup">
+        <div class="popup-wrap__content">
+            <div class="popup-wrap__content__close">
+                <i class="material-symbols-outlined">close</i>
+            </div>
+            <div class="popup-wrap__content__title">
+                <h3>아이디 찾기 완료</h3>
+            </div>
+            <div class="popup-wrap__content__form">
+                <div class="popup-wrap__content__form__message">
+                    <p>가입하신 아이디는 <strong>user123</strong> 입니다.</p>
+                </div>
+                <div class="popup-wrap__content__form__button">
+                    <button type="button" class="btn-login">
+                        <i class="material-symbols-outlined">login</i>
+                        로그인
+                    </button>
+                    <button type="button" class="btn-find-pw">
+                        <i class="material-symbols-outlined">key</i>
+                        비밀번호 찾기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 비밀번호 재설정 완료 팝업 -->
+    <div class="popup-wrap " id="resetPwCompletePopup">
+        <div class="popup-wrap__content">
+            <div class="popup-wrap__content__close">
+                <i class="material-symbols-outlined">close</i>
+            </div>
+            <div class="popup-wrap__content__title">
+                <h3>비밀번호 재설정 완료</h3>
+            </div>
+            <div class="popup-wrap__content__form">
+                <div class="popup-wrap__content__form__message">
+                    <p>입력하신 휴대폰으로 임시 비밀번호가 <br>발송되었습니다.</p>
+                    <p>로그인 후 비밀번호를 변경해주세요.</p>
+                </div>
+                <div class="popup-wrap__content__form__button">
+                    <button type="button" class="btn-login">
+                        <i class="material-symbols-outlined">login</i>
+                        로그인
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="footer">
+        <div class="footer__inquiry">
+            <div class="footer__inquiry-title">교육문의</div>
+            <div class="footer__inquiry-info">
+                <div class="footer__inquiry-item">
+                    <i class="material-symbols-outlined">call</i>
+                    <span class="footer__inquiry-label">전화</span>
+                    <span class="footer__inquiry-value">02) 2152-3915~4</span>
+                </div>
+                <div class="footer__inquiry-item">
+                    <i class="material-symbols-outlined">mail</i>
+                    <span class="footer__inquiry-label">메일</span>
+                    <span class="footer__inquiry-value">open@exc.co.kr</span>
+                </div>
+                <div class="footer__inquiry-item">
+                    <i class="material-symbols-outlined">chat</i>
+                    <span class="footer__inquiry-label">카카오톡</span>
+                    <span class="footer__inquiry-value">엑스퍼트아카데미</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer__logos">
+            <img src="./assets/images/other.png" alt="">
+        </div>
+    </footer>    
+</body>
+
+</html>

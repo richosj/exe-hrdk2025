@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>공정채용 기업교육</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+    <header id="header" class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="/"><img src="./assets/images/logos.png" alt="logo"></a>
+            </div>
+            <div class="header__login">
+                <a href="#" class="popup-open" data-target="loginPopup"><i class="material-symbols-outlined">login</i>로그인</a>
+                <a href="#"><i class="material-symbols-outlined">logout</i>로그아웃</a>
+                <a href="#"><i class="material-symbols-outlined">menu_book</i>나의 학습실</a>
+    
+            </div>
+        </div>
+    </header>
+    
+    <article class="all-banner">
+        <img src="./assets/images/back.png" alt="banner">
+    </article>    <main class="deposit-section">
+        <div class="deposit-card">
+          <div class="deposit-card__title">엑스퍼트컨설팅</div>
+          <div class="deposit-card__info">
+            <div class="deposit-info__row">
+              <span class="deposit-info__label">주문번호</span>
+              <span class="deposit-info__value">1191R20250603210313225</span>
+            </div>
+            <div class="deposit-info__row">
+              <span class="deposit-info__label">상품명</span>
+              <span class="deposit-info__value">엑스퍼트컨설팅 교육 예치금</span>
+            </div>
+            <div class="deposit-info__row deposit-info__row--price">
+              <span class="deposit-info__label">최종결제금액</span>
+              <span class="deposit-info__value text-red">30,000원</span>
+            </div>
+          </div>
+          <form class="deposit-form">
+            <div class="form-group">
+              <label for="depositor">입금자 <span class="text-red">*</span></label>
+              <input type="text" id="depositor" class="form-input" placeholder="이름 입력" value="오승준">
+            </div>
+            <div class="form-group">
+              <label for="bank_select">입금은행 <span class="text-red">*</span></label>
+              <select id="bank_select" class="form-input">
+                <option value="0">은행선택</option>
+                <option value="BK03">기업은행</option>
+                <option value="BK31">iM뱅크</option>
+                <option value="BK04">국민은행</option>
+                <option value="BK32">부산은행</option>
+                <option value="BK07">수협</option>
+                <option value="BK34">광주은행</option>
+                <option value="BK11">NH농협</option>
+                <option value="BK39">경남은행</option>
+                <option value="BK20">우리은행</option>
+                <option value="BK71">우체국</option>
+                <option value="BK23">SC제일은행</option>
+                <option value="BK81">KEB하나은행</option>
+                <option value="BK26">신한은행</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="buyr_name">구매자명 <span class="text-red">*</span></label>
+              <input type="text" id="buyr_name" class="form-input" placeholder="구매자명 입력">
+            </div>
+            <div class="form-group">
+              <label for="buyr_tel2">구매자 전화번호 <span class="text-red">*</span></label>
+              <input type="text" id="buyr_tel2" class="form-input" placeholder="구매자 전화번호 입력">
+            </div>
+            <div class="form-group">
+              <label for="buyr_mail">구매자 이메일 <span class="text-red">*</span></label>
+              <input type="text" id="buyr_mail" class="form-input" placeholder="구매자 이메일 입력">
+            </div>
+            <div class="form-group--button">
+              <button type="button" class="btn-primary btn-block" id="btn-issue-account">
+                <i class="material-symbols-outlined">account_balance</i>
+                입금 가상계좌 발급 요청
+              </button>
+            </div>
+          </form>
+          <div class="deposit-virtual" id="virtual-account-area" style="display:none;">
+            <div class="deposit-virtual__row">
+              <span class="deposit-virtual__label">가상 계좌번호</span>
+              <span class="deposit-virtual__value" id="virtual-account-number">1234-56-789012</span>
+            </div>
+            <div class="deposit-virtual__row">
+              <span class="deposit-virtual__label">마감기한</span>
+              <span class="deposit-virtual__value text-red" id="virtual-account-deadline">2025년 00월 00일 23시 59분 59초</span>
+            </div>
+          </div>
+        </div>
+      </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer__inquiry">
+            <div class="footer__inquiry-title">교육문의</div>
+            <div class="footer__inquiry-info">
+                <div class="footer__inquiry-item">
+                    <i class="material-symbols-outlined">call</i>
+                    <span class="footer__inquiry-label">전화</span>
+                    <span class="footer__inquiry-value">02) 2152-3915~4</span>
+                </div>
+                <div class="footer__inquiry-item">
+                    <i class="material-symbols-outlined">mail</i>
+                    <span class="footer__inquiry-label">메일</span>
+                    <span class="footer__inquiry-value">open@exc.co.kr</span>
+                </div>
+                <div class="footer__inquiry-item">
+                    <i class="material-symbols-outlined">chat</i>
+                    <span class="footer__inquiry-label">카카오톡</span>
+                    <span class="footer__inquiry-value">엑스퍼트아카데미</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer__logos">
+            <img src="./assets/images/other.png" alt="">
+        </div>
+    </footer>
+    <script>
+        document.getElementById('btn-issue-account').addEventListener('click', function() {
+        // 실제 발급 로직 대신 예시로 노출
+        document.getElementById('virtual-account-area').style.display = 'block';
+        // 실제로는 아래 값들을 서버에서 받아서 넣어야 함
+        document.getElementById('virtual-account-number').textContent = '1234-56-789012';
+        document.getElementById('virtual-account-deadline').textContent = '2025년 00월 00일 23시 59분 59초';
+        });
+    </script>
+
+</body>
+
+</html>

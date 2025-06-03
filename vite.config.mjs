@@ -6,13 +6,11 @@ import handlebars from 'vite-plugin-handlebars'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
-  const projectName = 'vite-full-template'
 
   const basePath = './'
 
   const pagesPath = path.resolve(__dirname, 'src')
-  const pageFiles = fs.readdirSync(pagesPath)
-    .filter(file => file.endsWith('.html') && file !== 'link-page.html')
+  const pageFiles = fs.readdirSync(pagesPath).filter(file => file.endsWith('.html'))
 
   const pageMetaList = pageFiles.map(file => {
     const filePath = path.join(pagesPath, file)
@@ -61,12 +59,6 @@ export default defineConfig(({ mode }) => {
               return 'assets/images/[name][extname]'
             }
             return 'assets/[name][extname]'
-          }
-        },
-        // ✅ 공통 코드 별도 chunk로 분리
-        manualChunks(id) {
-          if (id.includes('/src/js/common/')) {
-            return 'common' // 👉 assets/js/common.js로 별도 chunk
           }
         }
       },

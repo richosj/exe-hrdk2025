@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>공정채용 기업교육</title>
+  {{> meta}}
+</head>
+
+<body>
+  {{> header}}
+
+  <main>
+    <section class="notice-section">
+      <h2 class="notice-title">공지사항</h2>
+      
+      <div class="notice-list">
+        <a href="notice-read.html" class="notice-item">
+          <div class="notice-item__content">
+            <h3 class="notice-item__title">[공지] 2024년 1분기 교육과정 안내</h3>
+            <p class="notice-item__desc">2024년 1분기 교육과정 일정 및 신청 방법을 안내드립니다.</p>
+            <div class="notice-item__info">
+              <span class="notice-item__date">2024.01.15</span>
+              <span class="notice-item__views">조회수 1,234</span>
+            </div>
+          </div>
+          <i class="material-symbols-outlined">chevron_right</i>
+        </a>
+
+        <a href="notice-read.html" class="notice-item">
+          <div class="notice-item__content">
+            <h3 class="notice-item__title">[공지] 시스템 점검 안내</h3>
+            <p class="notice-item__desc">2024년 1월 20일 시스템 점검으로 인한 서비스 이용 안내</p>
+            <div class="notice-item__info">
+              <span class="notice-item__date">2024.01.10</span>
+              <span class="notice-item__views">조회수 856</span>
+            </div>
+          </div>
+          <i class="material-symbols-outlined">chevron_right</i>
+        </a>
+
+        <a href="notice-read.html" class="notice-item">
+          <div class="notice-item__content">
+            <h3 class="notice-item__title">[공지] 연말연시 휴무 안내</h3>
+            <p class="notice-item__desc">2023년 연말연시 휴무 일정 안내드립니다.</p>
+            <div class="notice-item__info">
+              <span class="notice-item__date">2023.12.20</span>
+              <span class="notice-item__views">조회수 1,567</span>
+            </div>
+          </div>
+          <i class="material-symbols-outlined">chevron_right</i>
+        </a>
+      </div>
+
+      <div class="pagination">
+        <a href="#" class="pagination__prev disabled">
+          <i class="material-symbols-outlined">chevron_left</i>
+        </a>
+        <div class="pagination__numbers">
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+        </div>
+        <a href="#" class="pagination__next">
+          <i class="material-symbols-outlined">chevron_right</i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  {{> footer}}
+</body>
+
+</html>

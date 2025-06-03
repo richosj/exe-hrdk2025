@@ -1,0 +1,38 @@
+
+.header{
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        height: 60px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    &__logo{
+        width: 100px;
+        img{
+            width: 100%;
+        }
+    }
+    &__login{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        a{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+}
+
+.all-banner{
+    img{
+        //height: 250px;
+        //width: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}

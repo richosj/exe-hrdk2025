@@ -16,10 +16,9 @@
                 <a href="/"><img src="./assets/images/logos.png" alt="logo"></a>
             </div>
             <div class="header__login">
-                <a href="#" class="popup-open" data-target="loginPopup"><i class="material-symbols-outlined">login</i>로그인</a>
-                <a href="#"><i class="material-symbols-outlined">logout</i>로그아웃</a>
-                <a href="#"><i class="material-symbols-outlined">menu_book</i>나의 학습실</a>
-    
+                <a href="#" class="popup-open" data-target="loginPopup">로그인</a>
+                <a href="#">로그아웃</a>
+                <a href="#">나의 학습실</a>
             </div>
         </div>
     </header>
@@ -28,7 +27,7 @@
         <img src="./assets/images/back.png" alt="banner">
     </article>    <main>
         <section class="survey-section">
-            <h2 class="survey-title">다음은 공정채용 기업교육에 대한 만족도입니다. 각 항목에 하나씩 응답하여 주십시오.</h2>
+            <h2 class="survey-title">다음은 공정채용 기업교육에 대한 만족도입니다.<br>각 항목에 하나씩 응답하여 주십시오.</h2>
             <form class="survey-form">
                 <!-- 1번 -->
                 <div class="survey-group">
@@ -75,12 +74,33 @@
                 <!-- 4-1 ~ 4-8 객관식 -->
                 <div class="survey-group">
                     <div class="survey-q">4-1. 본 과정에 대해 전반적으로 만족하십니까?</div>
-                    <div class="survey-a">
-                        <label><input type="radio" name="q4_1"> 매우 그렇지 않다</label>
-                        <label><input type="radio" name="q4_1"> 그렇지 않다</label>
-                        <label><input type="radio" name="q4_1"> 보통</label>
-                        <label><input type="radio" name="q4_1"> 그렇다</label>
-                        <label><input type="radio" name="q4_1"> 매우 그렇다</label>
+                    <div class="survey-a full">
+                        <div class="likert-scale">
+                            <div class="label left">매우 그렇지 않다</div>
+                            <div class="scale">
+                              <label>
+                                <input type="radio" name="likert" value="1">
+                                <span><em>1</em></span>
+                              </label>
+                              <label>
+                                <input type="radio" name="likert" value="2">
+                                <span><em>2</em></span>
+                              </label>
+                              <label>
+                                <input type="radio" name="likert" value="3">
+                                <span><em>3</em></span>
+                              </label>
+                              <label>
+                                <input type="radio" name="likert" value="4">
+                                <span><em>4</em></span>
+                              </label>
+                              <label>
+                                <input type="radio" name="likert" value="5">
+                                <span><em>5</em></span>
+                              </label>
+                            </div>
+                            <div class="label right">매우 그렇다</div>
+                          </div>
                     </div>
                 </div>
                 <div class="survey-group">
@@ -189,16 +209,17 @@
                 <!-- 6번 -->
                 <div class="survey-group">
                     <div class="survey-q">6. 본 교육의 내용 중 도움이 되었다고 생각하는 모듈은 무엇입니까?(복수응답 가능)</div>
-                    <div class="survey-a">
-                        <label><input type="checkbox" name="q6"> 공정채용의 이해 및 도입</label><br>
-                        <label><input type="checkbox" name="q6"> 사례 변화와 관련 사항</label><br>
-                        <label><input type="checkbox" name="q6"> 서류심사 AI활용 현장적용 및 효율화</label><br>
-                        <label><input type="checkbox" name="q6"> 채용트렌드와 공정채용</label><br>
-                        <label><input type="checkbox" name="q6"> 공정채용을 위한 인사담당자의 역할</label><br>
-                        <label><input type="checkbox" name="q6"> 공정채용 도구개발</label><br>
+                    <div class="survey-a full">
+                        <label><input type="checkbox" name="q6"> 공정채용의 이해 및 도입</label>
+                        <label><input type="checkbox" name="q6"> 사례 변화와 관련 사항</label>
+                        <label><input type="checkbox" name="q6"> 서류심사 AI활용 현장적용 및 효율화</label>
+                        <label><input type="checkbox" name="q6"> 채용트렌드와 공정채용</label>
+                        <label><input type="checkbox" name="q6"> 공정채용을 위한 인사담당자의 역할</label>
+                        <label><input type="checkbox" name="q6"> 공정채용 도구개발</label>
                         <label><input type="checkbox" name="q6"> 공정채용 체계적 수립</label>
                     </div>
                 </div>
+                
                 <!-- 주관식1 -->
                 <div class="survey-group">
                     <div class="survey-q">주관식 1. 향후 듣고 싶은 교육과정이 있다면 무엇입니까?</div>
@@ -214,15 +235,16 @@
                     </div>
                 </div>
                 <!-- 안내문구 및 제출 -->
-                <div class="survey-group">
-                    <div class="survey-q" style="text-align:center; color:#666;">설문에 응답해주셔서 감사합니다.</div>
+                <div class="survey-thankyou-box">
+                    설문에 응답해주셔서 감사합니다.
                 </div>
-                <div class="survey-group" style="text-align:center;">
-                    <button type="submit" class="btn btn-primary">
-                        <i class="material-symbols-outlined">send</i>
-                        제출하기
-                    </button>
-                </div>
+
+                
+                <button type="submit" class="btn btn-primary">
+                    <i class="material-symbols-outlined">send</i>
+                    제출하기
+                </button>
+                
             </form>
         </section>
     </main>
@@ -250,6 +272,8 @@
         <div class="footer__logos">
             <img src="./assets/images/other.png" alt="">
         </div>
-    </footer></body>
+    </footer>
+   
+</body>
 
 </html>

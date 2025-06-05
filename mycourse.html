@@ -17,10 +17,9 @@
               <a href="/"><img src="./assets/images/logos.png" alt="logo"></a>
           </div>
           <div class="header__login">
-              <a href="#" class="popup-open" data-target="loginPopup"><i class="material-symbols-outlined">login</i>로그인</a>
-              <a href="#"><i class="material-symbols-outlined">logout</i>로그아웃</a>
-              <a href="#"><i class="material-symbols-outlined">menu_book</i>나의 학습실</a>
-  
+              <a href="#" class="popup-open" data-target="loginPopup">로그인</a>
+              <a href="#">로그아웃</a>
+              <a href="#">나의 학습실</a>
           </div>
       </div>
   </header>
@@ -65,7 +64,7 @@
         <div class="course-list__info">
           <div class="course-list__row">
             <span class="course-list__label">교육일시</span>
-            <span class="course-list__value">2025.06.02(목) 09:00~14:00</span>
+            <span class="course-list__value">2025.06.02(목) 09:00~14:00 <span class="course-list__label__sub">취소불가</span></span>
           </div>
           <div class="course-list__row">
             <span class="course-list__label">과정종류</span>
@@ -77,14 +76,14 @@
           </div>
         </div>
         <div class="course-list__actions">
-          <span class="badge badge--primary">입금하기</span>
-          <span class="badge badge--success">수강완료</span>
-          <span class="badge badge--info">만족도조사</span>
-          <span class="badge badge--secondary">이러닝수강</span>
-          <button class="btn-cancel popup-open" data-target="cancelPopup">
+          <a href="#" class="badge badge--primary">입금하기</a>
+          <a href="#" class="badge badge--success">이러닝수강</a>
+          <a href="#" class="badge badge--info">만족도조사</a>
+          <a href="#" class="badge badge--secondary">수강완료</a>
+          <!-- <button class="btn-cancel popup-open" data-target="cancelPopup">
             <i class="material-symbols-outlined">close</i>
             취소
-          </button>
+          </button> -->
         </div>
       </div>
       <!-- 반복 -->
@@ -141,7 +140,7 @@
       </div>
     </div>
   </div>
-
+
   
 
   <footer id="footer" class="footer">
